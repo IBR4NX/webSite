@@ -1,0 +1,38 @@
+{
+  "en":"English",
+  "ar":"Arabic",
+  "test":"testing",
+    "home": "Home",
+    "search": "Search",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "profile": "Profile",
+    "settings": "Settings",
+    "help": "Help",
+  
+  "actions": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign In",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "error": "Login failed. Please try again."
+  }
+  ,
+  "contacts": {
+    "title": "Contact Us",
+    "intro": "We welcome your inquiries, feedback and suggestions. If you have any questions or need clarification about site content or the privacy policy, don't hesitate to reach out.",
+    "infoTitle": "Contact Information",
+    "emailPrompt": "You can contact us directly via email:",
+    "email": "ibr4nx@gmail.com",
+    "note": "We try to reply to all messages as soon as possible."
+  }
+}

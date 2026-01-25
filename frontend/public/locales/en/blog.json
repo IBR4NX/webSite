@@ -1,0 +1,10 @@
+{
+  "title": "Blog",
+  "intro": "Latest updates, articles, and guides from Ibovs — practical posts to help you get more from our product.",
+  "posts": [
+    { "title": "Welcome to the Ibovs blog", "excerpt": "A quick introduction to what we'll cover: product updates, tips, and company news." },
+    { "title": "Getting started guide", "excerpt": "How to create an account, set your preferences, and start using Ibovs effectively." }
+  ],
+  "noPosts": "لا توجد منشورات حاليًا.",
+  "description": "Updates and articles from Ibovs"
+}

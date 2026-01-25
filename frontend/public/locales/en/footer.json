@@ -1,0 +1,16 @@
+{
+  "quickLinks": "Quick Links",
+  "links": {
+    "about": "About Us",
+    "services": "Services",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "blog": "Blog",
+    "careers": "Careers",
+    "support": "Support",
+    "faq": "FAQ"
+  },
+  "followUs": "Follow Us",
+  "copyright": "© {{year}} Ibrahim Al-Mekhlafi. All rights reserved.",
+  "madeWith": " . "
+}

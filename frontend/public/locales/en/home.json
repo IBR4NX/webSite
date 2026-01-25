@@ -1,0 +1,18 @@
+{
+  "welcome": "Welcome to Our Platform",
+    "home": "Your Gateway to Seamless Online Selling!",
+      "title": "Your online store in one link",
+  "subtitle": "Create your store and start selling without a physical shop",
+  "cta": {
+    "start": "Get Started",
+    "explore": "Explore Stores"
+  },
+  "features": {
+    "store": "Private store for each seller",
+    "link": "Custom store link",
+    "dashboard": "Order management dashboard",
+    "location": "Location-based visibility",
+    "notifications": "Instant notifications",
+    "sharing": "Easy social sharing"
+  }
+}

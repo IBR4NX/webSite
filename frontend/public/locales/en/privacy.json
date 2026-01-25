@@ -1,0 +1,84 @@
+{
+  "title": "Privacy Policy",
+  "intro1": "We respect the privacy of our users and are committed to protecting any information collected while using this site. This privacy policy explains how we collect, use, and protect information, and outlines user rights and responsibilities.",
+  "intro2": "By using this site you agree to the terms of this privacy policy. If you do not agree with any part, please stop using the site.",
+  "section1": {
+    "title": "1. Scope",
+    "content": "This policy applies to all pages, services, and content provided through this website and does not apply to external sites or services linked from this site."
+  },
+  "section2": {
+    "title": "2. Information We Collect",
+    "personal": {
+      "title": "2.1 Personal Information",
+      "p1": "We do not collect personally identifying information such as full name, address, ID number, or payment details unless voluntarily submitted by the user when:",
+      "list": ["contacting us via email", "using contact forms"],
+      "p2": "This information is used only to respond to inquiries or provide support."
+    },
+    "nonPersonal": {
+      "title": "2.2 Non-personal Information",
+      "p1": "We may automatically collect non-personal information including, but not limited to:",
+      "list": ["IP address", "browser type", "operating system", "ISP", "pages visited", "visit date and time", "referrer"],
+      "p2": "These data are used for analytics and to improve site performance."
+    }
+  },
+  "cookies": {
+    "title": "3. Cookies",
+    "p1": "The site uses cookies and similar technologies to improve user experience, personalize content, and analyze traffic.",
+    "p2": "Users can control or disable cookies via their browser settings; disabling may affect site functionality."
+  },
+  "section4": {
+    "title": "4. Advertising and Third-Party Services",
+    "adSenseTitle": "4.1 Google AdSense",
+    "adSenseP1": "This site uses Google AdSense, an advertising service provided by Google LLC.",
+    "adSenseP2": "Google and its partners use cookies, including the DoubleClick cookie, to display personalized ads based on users' prior visits.",
+    "otherTitle": "4.2 Other Service Providers",
+    "otherList": ["analytics", "ad delivery", "performance optimization"],
+    "otherP": "These parties are subject to their own privacy policies; we are not responsible for their practices."
+  },
+  "usage": {
+    "title": "5. How We Use Information",
+    "list": ["Operate and maintain the site", "Improve content and user experience", "Analyze user behavior", "Detect fraudulent or illegal activity", "Comply with legal and regulatory obligations"]
+  },
+  "sharing": {
+    "title": "6. Sharing and Legal Disclosure",
+    "p1": "We do not sell, rent, or share personal user information with third parties except in the following cases:",
+    "list": ["to comply with a court order or legal process", "to protect rights of the site or users", "to prevent or investigate illegal activity"]
+  },
+  "security": {
+    "title": "7. Information Security",
+    "content": "We take appropriate technical and organizational measures to protect information, but cannot guarantee complete security online."
+  },
+  "rights": {
+    "title": "8. User Rights",
+    "content": "Users may request access, correction, or deletion of data within legal limits via the Contact page.",
+    "contactLink": "Contact"
+  },
+  "children": {
+    "title": "9. Children",
+    "content": "This site is not directed at children under 13 and we do not knowingly collect personal information from them. If discovered, such data will be deleted."
+  },
+  "externalLinks": {
+    "title": "10. External Links",
+    "content": "We are not responsible for the content or privacy practices of external websites."
+  },
+  "liability": {
+    "title": "11. Limitation of Liability",
+    "content": "Content is provided as-is without warranties."
+  },
+  "changes": {
+    "title": "12. Changes",
+    "content": "We reserve the right to modify this policy at any time."
+  },
+  "governingLaw": {
+    "title": "13. Governing Law",
+    "content": "Continued use after posting changes constitutes legal acceptance of those changes."
+  },
+  "contact": {
+    "title": "14. Contact",
+    "p1": "For legal inquiries please visit the",
+    "linkText": "Contact",
+    "linkHref": "/contact"
+  }
+  ,
+  "backToHome": "Back to home"
+}

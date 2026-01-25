@@ -1,0 +1,12 @@
+{
+  "title": "Support",
+  "intro": "Need help? We provide self-serve guides and a support team to answer questions.",
+  "helpCenterTitle": "Help Center",
+  "helpCenterDesc": "Search articles and step-by-step guides to solve common issues quickly.",
+  "contactTitle": "Contact options",
+  "contacts": [
+    { "type": "Email", "value": "support@ibovs.com", "note": "Expect response within 48 hours." },
+    { "type": "Phone", "value": "+966 5X XXX XXXX", "note": "Support hours: Sun–Thu 9:00–17:00 GMT+3." }
+  ],
+  "description": "Support resources for Ibovs users"
+}

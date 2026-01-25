@@ -1,0 +1,11 @@
+{
+  "title": "Careers",
+  "intro": "Join Ibovs — we hire curious, kind, and results-driven people. Below are current openings and how to apply.",
+  "positions": [
+    { "id": "1", "title": "Frontend Engineer", "location": "Remote", "type": "Full-time", "summary": "Build user-facing features using React and TypeScript." },
+    { "id": "2", "title": "Customer Success Specialist", "location": "Riyadh, Saudi Arabia", "type": "Full-time", "summary": "Help customers succeed and gather feedback to improve the product." }
+  ],
+  "apply": "Apply via email",
+  "noOpenings": "لا توجد وظائف شاغرة حاليًا.",
+  "description": "Open positions at Ibovs"
+}

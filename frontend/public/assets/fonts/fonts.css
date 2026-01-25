@@ -1,0 +1,31 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cabin+Sketch:wght@400;700&family=Lalezar&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+
+
+
+.ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+
+.cabin-sketch {
+  font-family: "Cabin Sketch", sans-serif;
+  font-style: normal;
+}
+
+.amiri {
+  font-family: "Amiri", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.amiri-quran {
+  font-family: "Amiri Quran", serif;
+  font-style: normal;
+}
+.lalezar {
+  font-family: "Lalezar", sans-serif;
+  font-style: normal;
+}
+
+body{
+  font-family: "Ubuntu",  sans-serif;
+}

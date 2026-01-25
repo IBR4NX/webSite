@@ -1,0 +1,11 @@
+{
+  "title": "FAQ",
+  "intro": "Answers to common questions — quick and practical.",
+  "items": [
+    { "q": "How do I create an account?", "a": "Click Sign up in the top-right, enter your email, and follow the verification steps." },
+    { "q": "How can I contact support?", "a": "Use the Support page to find our email and phone options, or open a ticket via the Help Center." },
+    { "q": "Where can I find the privacy policy?", "a": "The privacy policy is available at /privacy-policy and includes details about data handling." }
+  ],
+  "noFaqs": "لا توجد أسئلة متوفرة.",
+  "description": "Frequently asked questions"
+}
