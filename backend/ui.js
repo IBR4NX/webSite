@@ -10,7 +10,7 @@ function getNetworkURL(PORT) {
 };
 function printUI(PORT,startTime) {
     const timeTaken = Date.now() - startTime;
-  console.clear();
+  // console.clear();
   console.log(`\x1b[1;32m➜  Server\x1b[0m ready in \x1b[1;37m ${timeTaken} ms\x1b[0m`);
   console.log(`\x1b[1;37m➜  Local:\x1b[36m    http://localhost:${PORT}/\x1b[0m`);
   console.log(`\x1b[1;37m➜  Network:\x1b[36m  ${getNetworkURL(PORT)}\x1b[0m`);
@@ -46,7 +46,7 @@ function clearTerminal() {
   exec(cmd, (err) => {
     if (err) console.clear();
   });
-};
+}; 
 module.exports = {
     printUI,
     showHelp,

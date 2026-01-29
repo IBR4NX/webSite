@@ -1,17 +1,13 @@
-const express = require('express');
-// const dotenv = reqire('dotenv');
-const app = express();
+// console.clear();
 const startTime=Date.now();
+const express = require('express');
+const app = require('./src/app');
 //  fun tion to start the server (request, response)
-const routes = require('./routes/routes');
-const cors = require("cors");
-app.use(cors());
-app.use(express.json());
-app.use('/', routes);
 
+const {PORT}=require('./src/config')
 // ####################################################
 //      UI function to print the server info
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 const {printUI,showHelp,showURLs,openBrowser}=require('./ui');
 // start server
 function startServer() {

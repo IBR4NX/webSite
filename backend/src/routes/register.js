@@ -63,6 +63,15 @@ router.post("/register", async (req, res) => {
     }
 
 });
+
+function verifyPassword(stored, passwordAttempt) {
+  if (!stored) return false;
+  const [salt, hash] = stored.split(":");
+  if (!salt || !hash) return false;
+  const attempt = crypto.pbkdf2Sync(passwordAttempt, salt, 10000, 64, "sha512").toString("hex");
+  return attempt === hash;
+};
+
 const loginschema = zod.object({
     email: zod.string().email(),
     password: zod.string().min(6)
