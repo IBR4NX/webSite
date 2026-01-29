@@ -15,16 +15,6 @@
     "login": "Login",
     "register": "Register",
     "logout": "Logout"
-  },
-  "login": {
-    "title": "Login",
-    "email": "Email",
-    "password": "Password",
-    "submit": "Sign In",
-    "forgotPassword": "Forgot Password?",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign Up",
-    "error": "Login failed. Please try again."
   }
   ,
   "contacts": {

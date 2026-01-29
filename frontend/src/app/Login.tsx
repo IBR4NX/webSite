@@ -1,45 +1,36 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import Loading from '../components/Animations/loading';
+// import { useNavigate } from 'react-router-dom';
+import Loading from '../components/Animations/Loading';
+import {post} from '../features/api/api';
 
-const Login: React.FC = () => {
-  const { t } = useTranslation('common');
-  const navigate = useNavigate();
+const  Login: React.FC =  () => {
+const { t } = useTranslation('common');
+  // const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [messange, setMessange] = useState("");
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError('');
-
-    try {
-      const response = await axios.post('http://localhost:5000/login', {
-        email,
-        password,
-      });
-
-      // Assuming the backend returns a token or user data
-      console.log('Login successful:', response.data);
-      // Store token in localStorage or Redux
-      localStorage.setItem('token', response.data.token);
-      // Redirect to home or dashboard
-      navigate('/');
-    } catch (err) {
-      if (axios.isAxiosError(err)) {
-        setError(err.response?.data?.message || t('login.error'));
-      } else {
-        setError(t('login.error'));
-      }
-    } finally {
-      setTimeout(() => setLoading(false), 1000);
-    }
-  };
-
+    setMessange('');
+    const data = ({
+      email: email,
+      password: password,
+    });
+    post("/auth/login",data)
+    .then((res) => {
+      console.log(res);
+      setLoading(false)
+    }).catch((err) => {
+      console.log("error :",err);
+      setLoading(false);
+      setMessange(err.response?.data?.error || "حدث خطأ غير متوقع");
+    });
+  }
   return (
     <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:py-12 sm:px-6 lg:px-8">
       <div className="max-w-sm sm:max-w-md w-xs space-y-6 sm:space-y-8 bg-alpha-5 rounded-2xl p-6 sm:p-8 shadow-lg">
@@ -74,8 +65,8 @@ const Login: React.FC = () => {
           </div>
 
           <div className=" -mx-4 items-center justify-between">
-          {error && (
-            <div dir='ltr' className="text-red-500 text-sm t ">{error}</div>
+          {messange && (
+            <div dir='ltr' className="text-red-500 text-sm t ">{messange}</div>
           )}
 
             <div className="text-sm">
@@ -98,7 +89,7 @@ const Login: React.FC = () => {
           <div className="text-center">
             <span className="text-sm text-alpha ">
               {t('login.noAccount')}{' '}
-              <a href="#" className="font-medium text-gold ">
+              <a href="/register" className="font-medium text-gold ">
                 {t('login.signUp')}
               </a>
             </span>

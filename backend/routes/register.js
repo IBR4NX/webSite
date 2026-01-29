@@ -1,0 +1,100 @@
+const express = require("express");
+const crypto = require("crypto");
+const router = express.Router();
+const jwt = require('jsonwebtoken');
+const zod = require('zod');
+// const {v4:uuidv4}=require('uuid');
+const {user} = require("../db");
+const SECRET="ibovsSecret";
+function hashPassword(password) {
+  const salt = crypto.randomBytes(16).toString("hex");
+  const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, "sha512").toString("hex");
+  return `${salt}:${hash}`;
+};
+const schema = zod.object({
+    email: zod.string().email({ message: "Invalid email address" }),
+    password: zod.string().min(6, { message: "Password must be at least 6 characters long" }),
+    name: zod.string().nonempty({ message: "Name cannot be empty" }),
+    number: zod.string().min(9, { message: "Number must be at least 9 characters long" })
+});
+
+router.post("/register", async (req, res) => {
+  const {error, success} = schema.safeParse(req.body);
+    if (!success) {
+        res.status(400).json({ error: error.issues[0].message });
+        res.end();
+        return;
+    }
+    const search = await user.findOne({ email: req.body.email });
+
+    if (search) {
+        res.status(400).json({status: "!search", error: "User with this email already exists" });
+        res.end();
+        return;
+    }
+
+    const search2 = await user.findOne({ number: req.body.number });
+
+    if (search2) {
+        res.status(200).json({status: "!search2", error: "User with this number already exists" });
+        res.end();
+        return;
+    }
+        try {
+        const resp = await user.create(req.body);
+
+        if (!resp) {
+            res.status(400).json({status: "!resp", error: "User already exists" });
+            res.end();
+            // return;
+        }
+        const token = jwt.sign({ key: resp._id },SECRET);
+
+        console.log(resp.name + " registered");
+
+        res.status(200).json({ token, resp });
+        res.end();
+    }
+    catch(err){
+        console.log(err);
+        res.status(400).json({ error: "Invalid Data" });
+        res.end();
+        return;
+    }
+
+});
+const loginschema = zod.object({
+    email: zod.string().email(),
+    password: zod.string().min(6)
+})
+
+router.post("/login", async (req, res) => {
+
+    console.log(req.body.email);
+
+    try{
+        const { email, password } = loginschema.parse(req.body);
+        console.log(email, password);
+        const resp = await user.findOne({ email: req.body.email, password: req.body.password });
+        console.log(resp);
+        if (!resp) {
+            res.status(400).json({ error: "E-mail address or Password is wrong" });
+            res.end();
+            return;
+        }
+
+        const token = jwt.sign({ key: resp._id }, process.env.secret);
+
+        console.log(resp.name + " logged");
+
+        res.status(200).json({ token, resp });
+
+    }catch(err){
+        console.log(err)
+        res.status(400).json({ error: "Invalid data" });
+        res.end();
+        return;
+    }
+});
+
+module.exports = router;

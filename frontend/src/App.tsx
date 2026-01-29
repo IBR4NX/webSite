@@ -22,6 +22,7 @@ const Info = React.lazy(() => import("@/pages/Info"));
 const Profile = React.lazy(() => import("@/pages/Profile"));
 */
 import { Sys } from "./features/theme/themeSlice.ts";
+import Register from './app/register.tsx';
 function App() {
    Sys()
   const [loading, setLoading] = useState(true);
@@ -70,6 +71,7 @@ function AnimatedRoutes() {
           <Routes location={location} key={location.pathname}>
             <Route path="search" element={<Navigate to="/" />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route  element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
