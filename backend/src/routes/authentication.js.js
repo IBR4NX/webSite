@@ -1,6 +1,6 @@
 const express = require("express");
 const crypto = require("crypto");
-const client = require("../db");
+const client = require("../database");
 const router = express.Router();
 
 function verifyPassword(stored, passwordAttempt) {

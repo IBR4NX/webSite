@@ -1,14 +1,12 @@
-const express = require("express");
+import express from "express"
 const router = express.Router();
-const { user } = require("../db");
-const path = require("path");
-const asyncHandler=require('../helpers/asyncHandler.js')
+import path from "path";
+import asyncHandler from '../helpers/asyncHandler'
 router.use(express.static(path.join(__dirname, "../views")));
+// import authentication = require("./authentication.js");
+import registerRoutes  from "./register"
 
-const authentication = require("./authentication.js");
-const registerRoutes = require("./register");
-
-router.use("/auth", authentication);
+// router.use("/auth", authentication);
 router.use("/auth", registerRoutes);
 
 router.get("/test", async (req, res)=>{
@@ -21,7 +19,7 @@ router.get("/test", async (req, res)=>{
 });
 router.get(/.*/,asyncHandler( async (req, res)=>{
     throw new Error('Test Get Error')
-}),()=>{
+}),(req,res)=>{
     console.log("/:path(*): Header :",req.headers);
     console.log("/:path(*): Body :",req.body);
 }

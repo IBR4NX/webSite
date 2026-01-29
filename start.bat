@@ -3,5 +3,5 @@ setlocal
 echo Clear Terminal
 
 call cls
-call npx nodemon index.js
+call npm run dev
 endlocal

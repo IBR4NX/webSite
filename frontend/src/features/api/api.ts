@@ -34,12 +34,36 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
-export const post=(url:string,req:any)=> api.post(url,req);
-export async function apiPost(url:string,req:any) {
-  console.log(req);
-  const res = await api.post(url, req);
-  return res;
+interface apiData {
+  err:String,
+  success:boolean,
+  data:any,
 }
+function response(err:String="",data:any,success:boolean=true):apiData {
+// console.log(req); 
+// const res = await api.post(url, req);
+return {err:err , success:success,data:data} ;
+};
+export async function apiPost(url:string,req:any) {
+       api.post(url, req)
+        .then((res) => {
+          // localStorage.setItem("token", res.data.token);
+          // console.log(res);
+          // setMessange(res.data.error)
+          return response("",res.data);
+        })
+        .catch((err) => {
+          return response(err.response?.data?.error || "حدث خطأ غير متوقع",s);
+        });
+  
+  // try {
+  //   const res = await post(url,req);
+  //   return response(url,res.data);
+  //   } catch (error) {
+  //   return response(error:,"");
+  // } 
+}
+export const post=(url:string,req:any)=> api.post(url,req);
+
 export default  apiPost;
 export {API, API_URL,api }

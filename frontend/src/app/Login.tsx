@@ -34,9 +34,7 @@ const { t } = useTranslation('common');
   return (
     <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:py-12 sm:px-6 lg:px-8">
       <div className="max-w-sm sm:max-w-md w-xs space-y-6 sm:space-y-8 bg-alpha-5 rounded-2xl p-6 sm:p-8 shadow-lg">
-          <h2 className="mt-4 sm:mt-6 text-center text-2xl sm:text-3xl font-extrabold ">
-            {t('login.title')}
-          </h2>
+          <h2 className="mt-4 sm:mt-6 text-center text-2xl sm:text-3xl font-extrabold ">Log in</h2>
         <form className="mt-6 sm:mt-8 space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm space-y-2">
               <input

@@ -1,24 +1,24 @@
-// console.clear();
+console.clear();
 const startTime=Date.now();
-const express = require('express');
-const app = require('./src/app');
+import  express ,{Request,Response } from "express";
+import app from "./app";
 //  fun tion to start the server (request, response)
 
-const {PORT}=require('./src/config')
+const {PORT}=require('./config')
 // ####################################################
 //      UI function to print the server info
 // const PORT = process.env.PORT || 3000;
 const {printUI,showHelp,showURLs,openBrowser}=require('./ui');
 // start server
 function startServer() {
-  server = app.listen(PORT, printUI(PORT,startTime));
+  const server = app.listen(PORT, printUI(PORT,startTime));
 };
 
 startServer();
 // keyboard interaction
 process.stdin.on('data', (data) => {
   const key = data.toString().trim();
-  if (key === 'm') run().catch(console.dir);
+  // if (key === 'm') run().catch(console.dir);
   if (key === 'h') showHelp();
   if (key === 'u') showURLs(PORT);
   if (key === 'o') openBrowser(PORT);
@@ -28,7 +28,7 @@ process.stdin.on('data', (data) => {
   }
   if (key === 'r') {
     console.log('\x1b[33mRestarting server...\x1b[0m');
-    server.close(() => startServer());
+    // server.close(() => startServer());
   }
   if (key === 'q') {
     console.log('\x1b[31mServer stopped\x1b[0m');

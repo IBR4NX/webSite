@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clr":"clear",
     "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
     "build": "npm run build --prefix frontend",
     "test": "echo \"Error: no test specified\" && exit 1",
